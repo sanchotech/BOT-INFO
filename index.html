@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANCHO-XMD BOT INFO</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Font Awesome for Robot Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0b1120; /* Dark Blue */
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      background: linear-gradient(90deg, #3b82f6, #2563eb, #9333ea);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(17, 24, 39, 0.9);
+      padding: 1.5rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      border: 1px solid #2098D6;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+    }
+  .card:hover{
+    box-shadow: 0 0 10px #9B03E2;
+  }
+   .stat:hover{
+     box-shadow: 0 0 10px #039BE2;
+   }
+    .card h2 {
+      margin-top: 0;
+      color: #3b82f6;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .stat {
+      background: rgba(59, 130, 246, 0.15);
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #523969;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    }
+    .stat h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #60a5fa;
+    }
+    .stat p {
+      margin: 0.2rem 0 0;
+      font-size: 0.9rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    input {
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    button {
+      background: linear-gradient(90deg, #3b82f6, #2563eb, #9333ea);
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .repo-list {
+      margin-top: 1rem;
+    }
+    .repo-item {
+      background: rgba(59, 130, 246, 0.15);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      border: 1px solid #3b82f6;
+    }
+    .repo-item a {
+      color: #60a5fa;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .repo-item a:hover {
+      text-decoration: underline;
+    }
+   t.fas.fa-robot{
+      font-size: 50px;
+      background: linear-gradient(to right, #00B2FF, #EE0909);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    }
+    h1{
+      background: linear-gradient(to right, #00B2FF, #AE09EE, #EE0909);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+ .keith {
+      background: rgba(17, 24, 39, 0.9);
+      padding: 1.5rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      border: 1px solid #335565;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+    }
+  .keith:hover{
+    box-shadow: 0 0 10px #9B03E2;
+  }
+ .keithtech{
+   width: 30ch; /* Adjust to number of characters in your text */
+   color: #84858C;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000; /* Cursor effect */
+  font-family: monospace;
+  font-size: 2rem;
+  animation: typing 3s steps(30) 1 forwards, blink 0.5s step-end infinite alternate;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 18ch; }
+}
+
+/* Cursor blinking */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <t class="fas fa-robot"></t><br><br>
+    <h1>SANCHO-XMD BOT INFO</h1><br><br>
+    <div class="SanchoTech">FAST ADVANCED BOT</div><br><br>
+    <nav>
+      <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+      <a href="#" onclick="showPage('user')">Git User Check </a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page">
+      <div class="card">
+        <h2><i class="fas fa-robot"></i> SANCHO XMD INFO</h2>
+        <div class="SanchoTech">
+          <keith><button class="fab fa-github" onclick="window.location.href='https://github.com/sanchotech/SANCHO-XMD" >REPO</button><p>Repository </p><button class="fab fa-telegram" onclick="window.location.href='@sanchotech_tech_zw'">Owner</button><p>Contact Owner</p></SanchoTech>
+        </div>
+        <div class="stats" id="repo-stats">
+          <p>Loading...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Lookup Page -->
+    <div id="user" class="page" style="display:none;">
+      <div class="card">
+        <h2><i class="fas fa-robot"></i> GitHub User Check</h2>
+        <form id="userForm">
+          <input type="text" id="username" placeholder="Enter GitHub username..." required>
+          <button type="submit">Search</button>
+        </form>
+        <div id="user-info"></div>
+        <div class="repo-list" id="user-repos"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Pages
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+
+    // Fetch your repo info
+    async function loadRepo() {
+      try {
+        const repo = await axios.get("https://api.github.com/repos/sanchotech/SANCHO-XMD");
+        const data = repo.data;
+        document.getElementById('repo-stats').innerHTML = `
+          <div class="stat"><h3>${data.stargazers_count}</h3><p>Stars</p></div>
+          <div class="stat"><h3>${data.forks_count}</h3><p>Forks</p></div>
+          <div class="stat"><h3>${data.watchers_count}</h3><p>Watchers</p></div>
+          <div class="stat"><h3>${data.language || 'N/A'}</h3><p>Language</p></div>
+          <div class="stat"><h3>${(data.size/1024).toFixed(1)} MB</h3><p>Size</p></div>
+          <div class="stat"><h3>${new Date(data.updated_at).toLocaleDateString()}</h3><p>Last Updated</p></div>
+        `;
+      } catch (err) {
+        document.getElementById('repo-stats').innerHTML = "<p>Error loading repo data</p>";
+      }
+    }
+    loadRepo();
+
+    // User Lookup
+    document.getElementById('userForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      if (!username) return;
+      try {
+        const userRes = await axios.get(`https://api.github.com/users/${username}`);
+        const user = userRes.data;
+        document.getElementById('user-info').innerHTML = `
+          <div class="stat"><h3>${user.login}</h3><p>${user.name || ''}</p></div>
+          <p><img src=\"${user.avatar_url}\" width=\"100\" style=\"border-radius:50%;margin:10px 0;\"></p>
+          <p>Followers: ${user.followers} | Following: ${user.following}</p>
+          <p>Public Repos: ${user.public_repos}</p>
+          <p>Bio: ${user.bio || 'No bio'}</p>
+        `;
+
+        // FETCH Sancho repos
+        const reposRes = await axios.get(`https://api.github.com/users/${username}/repos?sort=updated`);
+        const repos = reposRes.data;
+        document.getElementById('user-repos').innerHTML = repos.map(r => `
+          <div class="repo-item">
+            <a href=\"${r.html_url}\" target=\"_blank\">${r.name}</a>
+            <p>${r.description || ''}</p>
+            <small>⭐ ${r.stargazers_count} | 🍴 ${r.forks_count}</small>
+          </div>
+        `).join('');
+      } catch (err) {
+        document.getElementById('user-info').innerHTML = "<p>Error: User not found</p>";
+        document.getElementById('user-repos').innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>
